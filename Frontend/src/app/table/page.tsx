@@ -8,8 +8,10 @@ import { useEffect, useState } from "react";
 export default function Page() {
   const [cards, setCards] = useState<Car[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [showCards, setShowCards] = useState<boolean>(true);
 
   useEffect(() => {
+    setCards([])
     fetchEventSource('/api/cars/streaming', {
       onmessage(ev: EventSourceMessage) {
         console.log(ev.event)
@@ -23,19 +25,29 @@ export default function Page() {
 
   }, []);
 
-  // if (loading) {
-  //   return <div className="text-center mt-20">Loading...</div>;
-  // }
+  const toggleShowCards = () => {
+    setShowCards(!showCards); // Toggle the state
+  };
+
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-center space-x-4">
       {cards.map((card) => (
         <Card
           key={card.id}
-          imageSrc={"https://via.placeholder.com/400"}
+          imageSrc={"https://tecdn.b-cdn.net/img/new/standard/nature/182.webp"}
           title={card.model}
           description={card.make}
         />
       ))}
+
+      {loading &&
+        Array.from({ length: 3 - cards.length }).map((_, index) => (
+          <Card key={`m-${index}`} />
+        ))
+      }
+      <button onClick={toggleShowCards}>
+        {showCards ? 'Hide Cards' : 'Show Cards'} {/* Change button text based on state */}
+      </button>
     </div>
   );
 }

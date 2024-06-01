@@ -1,5 +1,4 @@
 import { Car } from "@/app/interfaces/Car";
-import { Stream } from "@/app/interfaces/Stream";
 import { NextRequest, NextResponse } from "next/server";
 
 // Sample data
@@ -23,8 +22,8 @@ export async function GET(request: NextRequest, { params }: { params: { type: st
                     const data = `id: ${eventId}\nevent: ${eventType}\ndata: ${JSON.stringify(car)}\n\n`;
                     controller.enqueue(new TextEncoder().encode(data));
                     await sleep(1000); // Sleep for 1 second between each car
-                  }
-               
+                }
+
                 controller.close();
             }
         });

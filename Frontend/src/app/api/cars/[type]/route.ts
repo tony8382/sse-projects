@@ -1,4 +1,4 @@
-import { Car } from "@/app/interfaces/Car";
+import { Car } from "@/interfaces/Car";
 import { NextRequest, NextResponse } from "next/server";
 
 // Sample data
@@ -23,6 +23,8 @@ export async function GET(request: NextRequest, { params }: { params: { type: st
                     controller.enqueue(new TextEncoder().encode(data));
                     await sleep(1000); // Sleep for 1 second between each car
                 }
+                const data = `event: close\ndata: success\n\n`;
+                controller.enqueue(new TextEncoder().encode(data));
 
                 controller.close();
             }

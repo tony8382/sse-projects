@@ -27,6 +27,5 @@ public class GrpcHandler {
     public Mono<ServerResponse> nonBlocking(ServerRequest serverRequest) {
         return ok().contentType(MediaType.TEXT_EVENT_STREAM)
                 .body(greetingService.getStreamMessages(), String.class);
-
     }
 }

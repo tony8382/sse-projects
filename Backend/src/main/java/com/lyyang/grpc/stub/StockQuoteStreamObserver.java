@@ -15,7 +15,9 @@ public class StockQuoteStreamObserver implements StreamObserver<GreeterProto.Sto
 
     @Override
     public void onNext(GreeterProto.StockQuote stockQuote) {
-        sink.next(stockQuote.getPrice());
+        sink.next(
+                stockQuote.getPrice()
+        );
     }
 
     @Override

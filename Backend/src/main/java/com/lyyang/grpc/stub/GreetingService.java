@@ -4,6 +4,7 @@ import com.lyyang.grpc.model.GreeterGrpc;
 import com.lyyang.grpc.model.GreeterProto;
 import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.client.inject.GrpcClient;
+import org.springframework.http.codec.ServerSentEvent;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
@@ -22,16 +23,19 @@ public class GreetingService {
         return reply.getMessage();
     }
 
-    public Flux<Double> getStreamMessages() {
+    public Flux<ServerSentEvent<String>> getStreamMessages() {
         GreeterProto.Stock request = GreeterProto.Stock.newBuilder()
                 .setTickerSymbol("AU")
                 .setCompanyName("Austich")
                 .setDescription("server streaming example")
                 .build();
 
-        return Flux.create(sink -> {
-            greeterStub.serverSideStreamingGetListStockQuotes(request, new StockQuoteStreamObserver(sink));
-        });
+        Flux<Double> r = Flux.create(sink -> greeterStub.serverSideStreamingGetListStockQuotes(request, new StockQuoteStreamObserver(sink)));
+
+        return r.map(i -> ServerSentEvent.<String>builder()
+                .event("message")
+                .data("AAA" + i)
+                .build());
     }
 
 

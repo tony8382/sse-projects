@@ -20,6 +20,7 @@ import static org.springframework.web.reactive.function.server.ServerResponse.ok
 public class IntervalHandler {
 
     public Mono<ServerResponse> getTimes(ServerRequest serverRequest) {
+        log.info("GG getTimes");
         return ok().contentType(MediaType.TEXT_EVENT_STREAM)
                 .body(Flux.interval(Duration.ofSeconds(1))
                         .map(l -> new SimpleDateFormat("HH:mm:ss").format(new Date())), String.class);

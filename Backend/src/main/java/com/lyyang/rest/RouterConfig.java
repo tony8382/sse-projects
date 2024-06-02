@@ -1,7 +1,7 @@
 package com.lyyang.rest;
 
 import com.lyyang.filter.ExampleHandlerFilterFunction;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.server.RouterFunction;
@@ -10,17 +10,17 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
 
+@RequiredArgsConstructor
 @Configuration
 public class RouterConfig {
 
-    @Autowired
-    private FunctionHandler functionHandler;
+    private final FunctionHandler functionHandler;
 
-    @Autowired
-    private IntervalHandler intervalHandler;
+    private final IntervalHandler intervalHandler;
 
-    @Autowired
-    private ExampleHandlerFilterFunction exampleHandlerFilterFunction;
+    private final ExampleHandlerFilterFunction exampleHandlerFilterFunction;
+
+    private final GrpcHandler grpcHandler;
 
     @Bean
     public RouterFunction<ServerResponse> timerRouter() {
@@ -31,6 +31,8 @@ public class RouterConfig {
     public RouterFunction<ServerResponse> intervalRouter() {
         return route(GET("hello/{test}"), intervalHandler::getTimes)
                 .andRoute(GET("fhello4"), intervalHandler::checkParameterRuntimeException)
-                .andRoute(GET("fhello5"), intervalHandler::checkParameterCustomException);
+                .andRoute(GET("fhello5"), intervalHandler::checkParameterCustomException)
+                .andRoute(GET("api/hello"), grpcHandler::sayHello)
+                ;
     }
 }

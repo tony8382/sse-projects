@@ -12,7 +12,7 @@ public class CustomNettyConfig {
     public NettyReactiveWebServerFactory nettyReactiveWebServerFactory() {
         NettyReactiveWebServerFactory factory = new NettyReactiveWebServerFactory();
         factory.addServerCustomizers(httpServer -> {
-            LoopResources loopResources = LoopResources.create("custom-http", 16, true);
+            LoopResources loopResources = LoopResources.create("custom-http", 100, true);
             return httpServer.runOn(loopResources);
         });
         return factory;

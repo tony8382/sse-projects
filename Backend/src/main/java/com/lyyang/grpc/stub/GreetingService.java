@@ -30,12 +30,14 @@ public class GreetingService {
                 .setDescription("server streaming example")
                 .build();
 
-        Flux<Double> r = Flux.create(sink -> greeterStub.serverSideStreamingGetListStockQuotes(request, new StockQuoteStreamObserver(sink)));
-
-        return r.map(i -> ServerSentEvent.<String>builder()
-                .event("message")
-                .data("AAA" + i)
-                .build());
+        return Flux.<Double>create(sink ->
+                        greeterStub.serverSideStreamingGetListStockQuotes(request, new StockQuoteStreamObserver(sink)))
+                .map(i ->
+                        ServerSentEvent.<String>builder()
+                                .event("message")
+                                .data("AAA" + i)
+                                .build()
+                );
     }
 
 

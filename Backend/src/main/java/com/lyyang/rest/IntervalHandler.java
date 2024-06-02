@@ -32,7 +32,7 @@ public class IntervalHandler {
             request.queryParam("name").get();
             request.queryParam("G").get();
             log.info("sleep before");
-            Thread.sleep(5000);
+            Thread.sleep(50000);
             log.info("sleep after");
             return ok().contentType(MediaType.TEXT_PLAIN)
                     .body(Mono.just("Hello, " + request.queryParam("name").get()), String.class);

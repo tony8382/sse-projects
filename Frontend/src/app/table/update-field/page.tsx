@@ -18,7 +18,14 @@ export default function Page() {
       onmessage(ev: EventSourceMessage) {
         console.log(ev.event)
         if (ev.event === 'car') {
-          setCards(c => [...c, JSON.parse(ev.data)])
+          setCards(c => [
+            ...c.map(i => (
+              {
+                ...i,
+                color: 'pink'
+              }
+            )), JSON.parse(ev.data)])
+
         } else if (ev.event === 'close') {
           setLoading(false)
         }

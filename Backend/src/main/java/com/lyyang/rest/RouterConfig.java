@@ -33,6 +33,7 @@ public class RouterConfig {
                 .andRoute(GET("fhello4"), intervalHandler::checkParameterRuntimeException)
                 .andRoute(GET("fhello5"), intervalHandler::checkParameterCustomException)
                 .andRoute(GET("api/hello"), grpcHandler::sayHello)
+                .andRoute(GET("api/blocking"), grpcHandler::blocking)
                 ;
     }
 }

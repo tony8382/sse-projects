@@ -30,4 +30,21 @@ public class GrpcServerService extends GreeterGrpc.GreeterImplBase {
         responseObserver.onCompleted();
     }
 
+    @Override
+    public void serverSideStreamingGetListStockQuotes(GreeterProto.Stock request, StreamObserver<GreeterProto.StockQuote> responseObserver) {
+        for (int i = 1; i <= 5; i++) {
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            GreeterProto.StockQuote stockQuote = GreeterProto.StockQuote.newBuilder()
+                    .setPrice((int) (Math.random() * (300)))
+                    .setOfferNumber(i)
+                    .setDescription("Price for stock:" + request.getTickerSymbol())
+                    .build();
+            responseObserver.onNext(stockQuote);
+        }
+        responseObserver.onCompleted();
+    }
 }

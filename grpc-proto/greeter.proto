@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option java_package = "com.lyyang.test.testgrpc.model";
+option java_outer_classname = "GreeterProto";
+
+// The greeter service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+  rpc SayHelloAdmin (HelloRequest) returns (HelloReply) {}
+  rpc Authenticate (AuthRequest) returns (AuthReply) {}
+  rpc serverSideStreamingGetListStockQuotes(Stock) returns (stream StockQuote) {}
+
+}
+
+message Stock {
+  string ticker_symbol = 1;
+  string company_name = 2;
+  string description = 3;
+}
+message StockQuote {
+  double price = 1;
+  int32 offer_number = 2;
+  string description = 3;
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+message AuthRequest {
+  string username = 1;
+  string password = 2;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
+message AuthReply {
+  string token = 1;
+}

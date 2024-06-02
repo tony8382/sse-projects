@@ -8,8 +8,8 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.42.2)",
-    comments = "Source: greeter.proto")
+        value = "by gRPC proto compiler (version 1.42.2)",
+        comments = "Source: greeter.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class GreeterGrpc {
 
@@ -18,97 +18,128 @@ public final class GreeterGrpc {
   public static final String SERVICE_NAME = "Greeter";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<GreeterProto.HelloRequest,
-      GreeterProto.HelloReply> getSayHelloMethod;
+  private static volatile io.grpc.MethodDescriptor<com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest,
+          com.lyyang.test.testgrpc.model.GreeterProto.HelloReply> getSayHelloMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SayHello",
-      requestType = GreeterProto.HelloRequest.class,
-      responseType = GreeterProto.HelloReply.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<GreeterProto.HelloRequest,
-      GreeterProto.HelloReply> getSayHelloMethod() {
-    io.grpc.MethodDescriptor<GreeterProto.HelloRequest, GreeterProto.HelloReply> getSayHelloMethod;
+          fullMethodName = SERVICE_NAME + '/' + "SayHello",
+          requestType = com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest.class,
+          responseType = com.lyyang.test.testgrpc.model.GreeterProto.HelloReply.class,
+          methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest,
+          com.lyyang.test.testgrpc.model.GreeterProto.HelloReply> getSayHelloMethod() {
+    io.grpc.MethodDescriptor<com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest, com.lyyang.test.testgrpc.model.GreeterProto.HelloReply> getSayHelloMethod;
     if ((getSayHelloMethod = GreeterGrpc.getSayHelloMethod) == null) {
       synchronized (GreeterGrpc.class) {
         if ((getSayHelloMethod = GreeterGrpc.getSayHelloMethod) == null) {
           GreeterGrpc.getSayHelloMethod = getSayHelloMethod =
-              io.grpc.MethodDescriptor.<GreeterProto.HelloRequest, GreeterProto.HelloReply>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SayHello"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  GreeterProto.HelloRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  GreeterProto.HelloReply.getDefaultInstance()))
-              .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("SayHello"))
-              .build();
+                  io.grpc.MethodDescriptor.<com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest, com.lyyang.test.testgrpc.model.GreeterProto.HelloReply>newBuilder()
+                          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+                          .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SayHello"))
+                          .setSampledToLocalTracing(true)
+                          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                  com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest.getDefaultInstance()))
+                          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                  com.lyyang.test.testgrpc.model.GreeterProto.HelloReply.getDefaultInstance()))
+                          .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("SayHello"))
+                          .build();
         }
       }
     }
     return getSayHelloMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<GreeterProto.HelloRequest,
-      GreeterProto.HelloReply> getSayHelloAdminMethod;
+  private static volatile io.grpc.MethodDescriptor<com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest,
+          com.lyyang.test.testgrpc.model.GreeterProto.HelloReply> getSayHelloAdminMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "SayHelloAdmin",
-      requestType = GreeterProto.HelloRequest.class,
-      responseType = GreeterProto.HelloReply.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<GreeterProto.HelloRequest,
-      GreeterProto.HelloReply> getSayHelloAdminMethod() {
-    io.grpc.MethodDescriptor<GreeterProto.HelloRequest, GreeterProto.HelloReply> getSayHelloAdminMethod;
+          fullMethodName = SERVICE_NAME + '/' + "SayHelloAdmin",
+          requestType = com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest.class,
+          responseType = com.lyyang.test.testgrpc.model.GreeterProto.HelloReply.class,
+          methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest,
+          com.lyyang.test.testgrpc.model.GreeterProto.HelloReply> getSayHelloAdminMethod() {
+    io.grpc.MethodDescriptor<com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest, com.lyyang.test.testgrpc.model.GreeterProto.HelloReply> getSayHelloAdminMethod;
     if ((getSayHelloAdminMethod = GreeterGrpc.getSayHelloAdminMethod) == null) {
       synchronized (GreeterGrpc.class) {
         if ((getSayHelloAdminMethod = GreeterGrpc.getSayHelloAdminMethod) == null) {
           GreeterGrpc.getSayHelloAdminMethod = getSayHelloAdminMethod =
-              io.grpc.MethodDescriptor.<GreeterProto.HelloRequest, GreeterProto.HelloReply>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SayHelloAdmin"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  GreeterProto.HelloRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  GreeterProto.HelloReply.getDefaultInstance()))
-              .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("SayHelloAdmin"))
-              .build();
+                  io.grpc.MethodDescriptor.<com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest, com.lyyang.test.testgrpc.model.GreeterProto.HelloReply>newBuilder()
+                          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+                          .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SayHelloAdmin"))
+                          .setSampledToLocalTracing(true)
+                          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                  com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest.getDefaultInstance()))
+                          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                  com.lyyang.test.testgrpc.model.GreeterProto.HelloReply.getDefaultInstance()))
+                          .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("SayHelloAdmin"))
+                          .build();
         }
       }
     }
     return getSayHelloAdminMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<GreeterProto.AuthRequest,
-      GreeterProto.AuthReply> getAuthenticateMethod;
+  private static volatile io.grpc.MethodDescriptor<com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest,
+          com.lyyang.test.testgrpc.model.GreeterProto.AuthReply> getAuthenticateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "Authenticate",
-      requestType = GreeterProto.AuthRequest.class,
-      responseType = GreeterProto.AuthReply.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<GreeterProto.AuthRequest,
-      GreeterProto.AuthReply> getAuthenticateMethod() {
-    io.grpc.MethodDescriptor<GreeterProto.AuthRequest, GreeterProto.AuthReply> getAuthenticateMethod;
+          fullMethodName = SERVICE_NAME + '/' + "Authenticate",
+          requestType = com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest.class,
+          responseType = com.lyyang.test.testgrpc.model.GreeterProto.AuthReply.class,
+          methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest,
+          com.lyyang.test.testgrpc.model.GreeterProto.AuthReply> getAuthenticateMethod() {
+    io.grpc.MethodDescriptor<com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest, com.lyyang.test.testgrpc.model.GreeterProto.AuthReply> getAuthenticateMethod;
     if ((getAuthenticateMethod = GreeterGrpc.getAuthenticateMethod) == null) {
       synchronized (GreeterGrpc.class) {
         if ((getAuthenticateMethod = GreeterGrpc.getAuthenticateMethod) == null) {
           GreeterGrpc.getAuthenticateMethod = getAuthenticateMethod =
-              io.grpc.MethodDescriptor.<GreeterProto.AuthRequest, GreeterProto.AuthReply>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Authenticate"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  GreeterProto.AuthRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  GreeterProto.AuthReply.getDefaultInstance()))
-              .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("Authenticate"))
-              .build();
+                  io.grpc.MethodDescriptor.<com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest, com.lyyang.test.testgrpc.model.GreeterProto.AuthReply>newBuilder()
+                          .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+                          .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Authenticate"))
+                          .setSampledToLocalTracing(true)
+                          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                  com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest.getDefaultInstance()))
+                          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                  com.lyyang.test.testgrpc.model.GreeterProto.AuthReply.getDefaultInstance()))
+                          .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("Authenticate"))
+                          .build();
         }
       }
     }
     return getAuthenticateMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.lyyang.test.testgrpc.model.GreeterProto.Stock,
+          com.lyyang.test.testgrpc.model.GreeterProto.StockQuote> getServerSideStreamingGetListStockQuotesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+          fullMethodName = SERVICE_NAME + '/' + "serverSideStreamingGetListStockQuotes",
+          requestType = com.lyyang.test.testgrpc.model.GreeterProto.Stock.class,
+          responseType = com.lyyang.test.testgrpc.model.GreeterProto.StockQuote.class,
+          methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.lyyang.test.testgrpc.model.GreeterProto.Stock,
+          com.lyyang.test.testgrpc.model.GreeterProto.StockQuote> getServerSideStreamingGetListStockQuotesMethod() {
+    io.grpc.MethodDescriptor<com.lyyang.test.testgrpc.model.GreeterProto.Stock, com.lyyang.test.testgrpc.model.GreeterProto.StockQuote> getServerSideStreamingGetListStockQuotesMethod;
+    if ((getServerSideStreamingGetListStockQuotesMethod = GreeterGrpc.getServerSideStreamingGetListStockQuotesMethod) == null) {
+      synchronized (GreeterGrpc.class) {
+        if ((getServerSideStreamingGetListStockQuotesMethod = GreeterGrpc.getServerSideStreamingGetListStockQuotesMethod) == null) {
+          GreeterGrpc.getServerSideStreamingGetListStockQuotesMethod = getServerSideStreamingGetListStockQuotesMethod =
+                  io.grpc.MethodDescriptor.<com.lyyang.test.testgrpc.model.GreeterProto.Stock, com.lyyang.test.testgrpc.model.GreeterProto.StockQuote>newBuilder()
+                          .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+                          .setFullMethodName(generateFullMethodName(SERVICE_NAME, "serverSideStreamingGetListStockQuotes"))
+                          .setSampledToLocalTracing(true)
+                          .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                  com.lyyang.test.testgrpc.model.GreeterProto.Stock.getDefaultInstance()))
+                          .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                                  com.lyyang.test.testgrpc.model.GreeterProto.StockQuote.getDefaultInstance()))
+                          .setSchemaDescriptor(new GreeterMethodDescriptorSupplier("serverSideStreamingGetListStockQuotes"))
+                          .build();
+        }
+      }
+    }
+    return getServerSideStreamingGetListStockQuotesMethod;
   }
 
   /**
@@ -116,12 +147,12 @@ public final class GreeterGrpc {
    */
   public static GreeterStub newStub(io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<GreeterStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<GreeterStub>() {
-        @Override
-        public GreeterStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new GreeterStub(channel, callOptions);
-        }
-      };
+            new io.grpc.stub.AbstractStub.StubFactory<GreeterStub>() {
+              @java.lang.Override
+              public GreeterStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+                return new GreeterStub(channel, callOptions);
+              }
+            };
     return GreeterStub.newStub(factory, channel);
   }
 
@@ -129,14 +160,14 @@ public final class GreeterGrpc {
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static GreeterBlockingStub newBlockingStub(
-      io.grpc.Channel channel) {
+          io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<GreeterBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<GreeterBlockingStub>() {
-        @Override
-        public GreeterBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new GreeterBlockingStub(channel, callOptions);
-        }
-      };
+            new io.grpc.stub.AbstractStub.StubFactory<GreeterBlockingStub>() {
+              @java.lang.Override
+              public GreeterBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+                return new GreeterBlockingStub(channel, callOptions);
+              }
+            };
     return GreeterBlockingStub.newStub(factory, channel);
   }
 
@@ -144,14 +175,14 @@ public final class GreeterGrpc {
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
   public static GreeterFutureStub newFutureStub(
-      io.grpc.Channel channel) {
+          io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<GreeterFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<GreeterFutureStub>() {
-        @Override
-        public GreeterFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new GreeterFutureStub(channel, callOptions);
-        }
-      };
+            new io.grpc.stub.AbstractStub.StubFactory<GreeterFutureStub>() {
+              @java.lang.Override
+              public GreeterFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+                return new GreeterFutureStub(channel, callOptions);
+              }
+            };
     return GreeterFutureStub.newStub(factory, channel);
   }
 
@@ -167,49 +198,63 @@ public final class GreeterGrpc {
      * Sends a greeting
      * </pre>
      */
-    public void sayHello(GreeterProto.HelloRequest request,
-                         io.grpc.stub.StreamObserver<GreeterProto.HelloReply> responseObserver) {
+    public void sayHello(com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest request,
+                         io.grpc.stub.StreamObserver<com.lyyang.test.testgrpc.model.GreeterProto.HelloReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSayHelloMethod(), responseObserver);
     }
 
     /**
      */
-    public void sayHelloAdmin(GreeterProto.HelloRequest request,
-                              io.grpc.stub.StreamObserver<GreeterProto.HelloReply> responseObserver) {
+    public void sayHelloAdmin(com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest request,
+                              io.grpc.stub.StreamObserver<com.lyyang.test.testgrpc.model.GreeterProto.HelloReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSayHelloAdminMethod(), responseObserver);
     }
 
     /**
      */
-    public void authenticate(GreeterProto.AuthRequest request,
-                             io.grpc.stub.StreamObserver<GreeterProto.AuthReply> responseObserver) {
+    public void authenticate(com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest request,
+                             io.grpc.stub.StreamObserver<com.lyyang.test.testgrpc.model.GreeterProto.AuthReply> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAuthenticateMethod(), responseObserver);
     }
 
-    @Override public final io.grpc.ServerServiceDefinition bindService() {
+    /**
+     */
+    public void serverSideStreamingGetListStockQuotes(com.lyyang.test.testgrpc.model.GreeterProto.Stock request,
+                                                      io.grpc.stub.StreamObserver<com.lyyang.test.testgrpc.model.GreeterProto.StockQuote> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getServerSideStreamingGetListStockQuotesMethod(), responseObserver);
+    }
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getSayHelloMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                GreeterProto.HelloRequest,
-                GreeterProto.HelloReply>(
-                  this, METHODID_SAY_HELLO)))
-          .addMethod(
-            getSayHelloAdminMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                GreeterProto.HelloRequest,
-                GreeterProto.HelloReply>(
-                  this, METHODID_SAY_HELLO_ADMIN)))
-          .addMethod(
-            getAuthenticateMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                GreeterProto.AuthRequest,
-                GreeterProto.AuthReply>(
-                  this, METHODID_AUTHENTICATE)))
-          .build();
+              .addMethod(
+                      getSayHelloMethod(),
+                      io.grpc.stub.ServerCalls.asyncUnaryCall(
+                              new MethodHandlers<
+                                      com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest,
+                                      com.lyyang.test.testgrpc.model.GreeterProto.HelloReply>(
+                                      this, METHODID_SAY_HELLO)))
+              .addMethod(
+                      getSayHelloAdminMethod(),
+                      io.grpc.stub.ServerCalls.asyncUnaryCall(
+                              new MethodHandlers<
+                                      com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest,
+                                      com.lyyang.test.testgrpc.model.GreeterProto.HelloReply>(
+                                      this, METHODID_SAY_HELLO_ADMIN)))
+              .addMethod(
+                      getAuthenticateMethod(),
+                      io.grpc.stub.ServerCalls.asyncUnaryCall(
+                              new MethodHandlers<
+                                      com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest,
+                                      com.lyyang.test.testgrpc.model.GreeterProto.AuthReply>(
+                                      this, METHODID_AUTHENTICATE)))
+              .addMethod(
+                      getServerSideStreamingGetListStockQuotesMethod(),
+                      io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+                              new MethodHandlers<
+                                      com.lyyang.test.testgrpc.model.GreeterProto.Stock,
+                                      com.lyyang.test.testgrpc.model.GreeterProto.StockQuote>(
+                                      this, METHODID_SERVER_SIDE_STREAMING_GET_LIST_STOCK_QUOTES)))
+              .build();
     }
   }
 
@@ -220,13 +265,13 @@ public final class GreeterGrpc {
    */
   public static final class GreeterStub extends io.grpc.stub.AbstractAsyncStub<GreeterStub> {
     private GreeterStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+            io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected GreeterStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+            io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GreeterStub(channel, callOptions);
     }
 
@@ -235,26 +280,34 @@ public final class GreeterGrpc {
      * Sends a greeting
      * </pre>
      */
-    public void sayHello(GreeterProto.HelloRequest request,
-                         io.grpc.stub.StreamObserver<GreeterProto.HelloReply> responseObserver) {
+    public void sayHello(com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest request,
+                         io.grpc.stub.StreamObserver<com.lyyang.test.testgrpc.model.GreeterProto.HelloReply> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getSayHelloMethod(), getCallOptions()), request, responseObserver);
+              getChannel().newCall(getSayHelloMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void sayHelloAdmin(GreeterProto.HelloRequest request,
-                              io.grpc.stub.StreamObserver<GreeterProto.HelloReply> responseObserver) {
+    public void sayHelloAdmin(com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest request,
+                              io.grpc.stub.StreamObserver<com.lyyang.test.testgrpc.model.GreeterProto.HelloReply> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getSayHelloAdminMethod(), getCallOptions()), request, responseObserver);
+              getChannel().newCall(getSayHelloAdminMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void authenticate(GreeterProto.AuthRequest request,
-                             io.grpc.stub.StreamObserver<GreeterProto.AuthReply> responseObserver) {
+    public void authenticate(com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest request,
+                             io.grpc.stub.StreamObserver<com.lyyang.test.testgrpc.model.GreeterProto.AuthReply> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getAuthenticateMethod(), getCallOptions()), request, responseObserver);
+              getChannel().newCall(getAuthenticateMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void serverSideStreamingGetListStockQuotes(com.lyyang.test.testgrpc.model.GreeterProto.Stock request,
+                                                      io.grpc.stub.StreamObserver<com.lyyang.test.testgrpc.model.GreeterProto.StockQuote> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+              getChannel().newCall(getServerSideStreamingGetListStockQuotesMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -265,13 +318,13 @@ public final class GreeterGrpc {
    */
   public static final class GreeterBlockingStub extends io.grpc.stub.AbstractBlockingStub<GreeterBlockingStub> {
     private GreeterBlockingStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+            io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected GreeterBlockingStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+            io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GreeterBlockingStub(channel, callOptions);
     }
 
@@ -280,23 +333,31 @@ public final class GreeterGrpc {
      * Sends a greeting
      * </pre>
      */
-    public GreeterProto.HelloReply sayHello(GreeterProto.HelloRequest request) {
+    public com.lyyang.test.testgrpc.model.GreeterProto.HelloReply sayHello(com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getSayHelloMethod(), getCallOptions(), request);
+              getChannel(), getSayHelloMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public GreeterProto.HelloReply sayHelloAdmin(GreeterProto.HelloRequest request) {
+    public com.lyyang.test.testgrpc.model.GreeterProto.HelloReply sayHelloAdmin(com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getSayHelloAdminMethod(), getCallOptions(), request);
+              getChannel(), getSayHelloAdminMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public GreeterProto.AuthReply authenticate(GreeterProto.AuthRequest request) {
+    public com.lyyang.test.testgrpc.model.GreeterProto.AuthReply authenticate(com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getAuthenticateMethod(), getCallOptions(), request);
+              getChannel(), getAuthenticateMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<com.lyyang.test.testgrpc.model.GreeterProto.StockQuote> serverSideStreamingGetListStockQuotes(
+            com.lyyang.test.testgrpc.model.GreeterProto.Stock request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+              getChannel(), getServerSideStreamingGetListStockQuotesMethod(), getCallOptions(), request);
     }
   }
 
@@ -307,13 +368,13 @@ public final class GreeterGrpc {
    */
   public static final class GreeterFutureStub extends io.grpc.stub.AbstractFutureStub<GreeterFutureStub> {
     private GreeterFutureStub(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+            io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected GreeterFutureStub build(
-        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+            io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new GreeterFutureStub(channel, callOptions);
     }
 
@@ -322,38 +383,39 @@ public final class GreeterGrpc {
      * Sends a greeting
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<GreeterProto.HelloReply> sayHello(
-        GreeterProto.HelloRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.lyyang.test.testgrpc.model.GreeterProto.HelloReply> sayHello(
+            com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getSayHelloMethod(), getCallOptions()), request);
+              getChannel().newCall(getSayHelloMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<GreeterProto.HelloReply> sayHelloAdmin(
-        GreeterProto.HelloRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.lyyang.test.testgrpc.model.GreeterProto.HelloReply> sayHelloAdmin(
+            com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getSayHelloAdminMethod(), getCallOptions()), request);
+              getChannel().newCall(getSayHelloAdminMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<GreeterProto.AuthReply> authenticate(
-        GreeterProto.AuthRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.lyyang.test.testgrpc.model.GreeterProto.AuthReply> authenticate(
+            com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getAuthenticateMethod(), getCallOptions()), request);
+              getChannel().newCall(getAuthenticateMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_SAY_HELLO = 0;
   private static final int METHODID_SAY_HELLO_ADMIN = 1;
   private static final int METHODID_AUTHENTICATE = 2;
+  private static final int METHODID_SERVER_SIDE_STREAMING_GET_LIST_STOCK_QUOTES = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
-      io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
-      io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
-      io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
-      io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
+          io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
+          io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
+          io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
+          io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
     private final GreeterImplBase serviceImpl;
     private final int methodId;
 
@@ -362,31 +424,35 @@ public final class GreeterGrpc {
       this.methodId = methodId;
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SAY_HELLO:
-          serviceImpl.sayHello((GreeterProto.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<GreeterProto.HelloReply>) responseObserver);
+          serviceImpl.sayHello((com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest) request,
+                  (io.grpc.stub.StreamObserver<com.lyyang.test.testgrpc.model.GreeterProto.HelloReply>) responseObserver);
           break;
         case METHODID_SAY_HELLO_ADMIN:
-          serviceImpl.sayHelloAdmin((GreeterProto.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<GreeterProto.HelloReply>) responseObserver);
+          serviceImpl.sayHelloAdmin((com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest) request,
+                  (io.grpc.stub.StreamObserver<com.lyyang.test.testgrpc.model.GreeterProto.HelloReply>) responseObserver);
           break;
         case METHODID_AUTHENTICATE:
-          serviceImpl.authenticate((GreeterProto.AuthRequest) request,
-              (io.grpc.stub.StreamObserver<GreeterProto.AuthReply>) responseObserver);
+          serviceImpl.authenticate((com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest) request,
+                  (io.grpc.stub.StreamObserver<com.lyyang.test.testgrpc.model.GreeterProto.AuthReply>) responseObserver);
+          break;
+        case METHODID_SERVER_SIDE_STREAMING_GET_LIST_STOCK_QUOTES:
+          serviceImpl.serverSideStreamingGetListStockQuotes((com.lyyang.test.testgrpc.model.GreeterProto.Stock) request,
+                  (io.grpc.stub.StreamObserver<com.lyyang.test.testgrpc.model.GreeterProto.StockQuote>) responseObserver);
           break;
         default:
           throw new AssertionError();
       }
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
-        io.grpc.stub.StreamObserver<Resp> responseObserver) {
+            io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         default:
           throw new AssertionError();
@@ -395,35 +461,35 @@ public final class GreeterGrpc {
   }
 
   private static abstract class GreeterBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
+          implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     GreeterBaseDescriptorSupplier() {}
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return GreeterProto.getDescriptor();
+      return com.lyyang.test.testgrpc.model.GreeterProto.getDescriptor();
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("Greeter");
     }
   }
 
   private static final class GreeterFileDescriptorSupplier
-      extends GreeterBaseDescriptorSupplier {
+          extends GreeterBaseDescriptorSupplier {
     GreeterFileDescriptorSupplier() {}
   }
 
   private static final class GreeterMethodDescriptorSupplier
-      extends GreeterBaseDescriptorSupplier
-      implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
+          extends GreeterBaseDescriptorSupplier
+          implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final String methodName;
 
     GreeterMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }
@@ -438,11 +504,12 @@ public final class GreeterGrpc {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new GreeterFileDescriptorSupplier())
-              .addMethod(getSayHelloMethod())
-              .addMethod(getSayHelloAdminMethod())
-              .addMethod(getAuthenticateMethod())
-              .build();
+                  .setSchemaDescriptor(new GreeterFileDescriptorSupplier())
+                  .addMethod(getSayHelloMethod())
+                  .addMethod(getSayHelloAdminMethod())
+                  .addMethod(getAuthenticateMethod())
+                  .addMethod(getServerSideStreamingGetListStockQuotesMethod())
+                  .build();
         }
       }
     }

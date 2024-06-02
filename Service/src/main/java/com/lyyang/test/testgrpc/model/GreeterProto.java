@@ -6,107 +6,205 @@ package com.lyyang.test.testgrpc.model;
 public final class GreeterProto {
   private GreeterProto() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistryLite registry) {
+          com.google.protobuf.ExtensionRegistryLite registry) {
   }
 
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+          com.google.protobuf.ExtensionRegistry registry) {
     registerAllExtensions(
-        (com.google.protobuf.ExtensionRegistryLite) registry);
+            (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface HelloRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:HelloRequest)
-      com.google.protobuf.MessageOrBuilder {
+  public interface StockOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:Stock)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
-     * @return The name.
+     * <code>string ticker_symbol = 1;</code>
+     * @return The tickerSymbol.
      */
-    String getName();
+    java.lang.String getTickerSymbol();
     /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
+     * <code>string ticker_symbol = 1;</code>
+     * @return The bytes for tickerSymbol.
      */
     com.google.protobuf.ByteString
-        getNameBytes();
+    getTickerSymbolBytes();
+
+    /**
+     * <code>string company_name = 2;</code>
+     * @return The companyName.
+     */
+    java.lang.String getCompanyName();
+    /**
+     * <code>string company_name = 2;</code>
+     * @return The bytes for companyName.
+     */
+    com.google.protobuf.ByteString
+    getCompanyNameBytes();
+
+    /**
+     * <code>string description = 3;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 3;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+    getDescriptionBytes();
   }
   /**
-   * <pre>
-   * The request message containing the user's name.
-   * </pre>
-   *
-   * Protobuf type {@code HelloRequest}
+   * Protobuf type {@code Stock}
    */
-  public static final class HelloRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:HelloRequest)
-      HelloRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use HelloRequest.newBuilder() to construct.
-    private HelloRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  public static final class Stock extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:Stock)
+          StockOrBuilder {
+    private static final long serialVersionUID = 0L;
+    // Use Stock.newBuilder() to construct.
+    private Stock(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private HelloRequest() {
-      name_ = "";
+    private Stock() {
+      tickerSymbol_ = "";
+      companyName_ = "";
+      description_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new HelloRequest();
+    protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+      return new Stock();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return GreeterProto.internal_static_HelloRequest_descriptor;
+    getDescriptor() {
+      return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_Stock_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return GreeterProto.internal_static_HelloRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              HelloRequest.class, Builder.class);
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_Stock_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      com.lyyang.test.testgrpc.model.GreeterProto.Stock.class, com.lyyang.test.testgrpc.model.GreeterProto.Stock.Builder.class);
     }
 
-    public static final int NAME_FIELD_NUMBER = 1;
-    private volatile Object name_;
+    public static final int TICKER_SYMBOL_FIELD_NUMBER = 1;
+    private volatile java.lang.Object tickerSymbol_;
     /**
-     * <code>string name = 1;</code>
-     * @return The name.
+     * <code>string ticker_symbol = 1;</code>
+     * @return The tickerSymbol.
      */
-    @Override
-    public String getName() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getTickerSymbol() {
+      java.lang.Object ref = tickerSymbol_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        name_ = s;
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tickerSymbol_ = s;
         return s;
       }
     }
     /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
+     * <code>string ticker_symbol = 1;</code>
+     * @return The bytes for tickerSymbol.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getNameBytes() {
-      Object ref = name_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
-        name_ = b;
+    getTickerSymbolBytes() {
+      java.lang.Object ref = tickerSymbol_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        tickerSymbol_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COMPANY_NAME_FIELD_NUMBER = 2;
+    private volatile java.lang.Object companyName_;
+    /**
+     * <code>string company_name = 2;</code>
+     * @return The companyName.
+     */
+    @java.lang.Override
+    public java.lang.String getCompanyName() {
+      java.lang.Object ref = companyName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        companyName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string company_name = 2;</code>
+     * @return The bytes for companyName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getCompanyNameBytes() {
+      java.lang.Object ref = companyName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        companyName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>string description = 3;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 3;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        description_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -114,7 +212,7 @@ public final class GreeterProto {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -124,16 +222,1456 @@ public final class GreeterProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+            throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tickerSymbol_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tickerSymbol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, companyName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tickerSymbol_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tickerSymbol_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(companyName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, companyName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof com.lyyang.test.testgrpc.model.GreeterProto.Stock)) {
+        return super.equals(obj);
+      }
+      com.lyyang.test.testgrpc.model.GreeterProto.Stock other = (com.lyyang.test.testgrpc.model.GreeterProto.Stock) obj;
+
+      if (!getTickerSymbol()
+              .equals(other.getTickerSymbol())) return false;
+      if (!getCompanyName()
+              .equals(other.getCompanyName())) return false;
+      if (!getDescription()
+              .equals(other.getDescription())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TICKER_SYMBOL_FIELD_NUMBER;
+      hash = (53 * hash) + getTickerSymbol().hashCode();
+      hash = (37 * hash) + COMPANY_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getCompanyName().hashCode();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lyyang.test.testgrpc.model.GreeterProto.Stock parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.Stock parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.Stock parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.Stock parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.Stock parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.Stock parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.Stock parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.Stock parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.Stock parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.Stock parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.Stock parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.Stock parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lyyang.test.testgrpc.model.GreeterProto.Stock prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Stock}
+     */
+    public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:Stock)
+            com.lyyang.test.testgrpc.model.GreeterProto.StockOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_Stock_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_Stock_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        com.lyyang.test.testgrpc.model.GreeterProto.Stock.class, com.lyyang.test.testgrpc.model.GreeterProto.Stock.Builder.class);
+      }
+
+      // Construct using com.lyyang.test.testgrpc.model.GreeterProto.Stock.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        tickerSymbol_ = "";
+
+        companyName_ = "";
+
+        description_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_Stock_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.Stock getDefaultInstanceForType() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.Stock.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.Stock build() {
+        com.lyyang.test.testgrpc.model.GreeterProto.Stock result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.Stock buildPartial() {
+        com.lyyang.test.testgrpc.model.GreeterProto.Stock result = new com.lyyang.test.testgrpc.model.GreeterProto.Stock(this);
+        result.tickerSymbol_ = tickerSymbol_;
+        result.companyName_ = companyName_;
+        result.description_ = description_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lyyang.test.testgrpc.model.GreeterProto.Stock) {
+          return mergeFrom((com.lyyang.test.testgrpc.model.GreeterProto.Stock)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lyyang.test.testgrpc.model.GreeterProto.Stock other) {
+        if (other == com.lyyang.test.testgrpc.model.GreeterProto.Stock.getDefaultInstance()) return this;
+        if (!other.getTickerSymbol().isEmpty()) {
+          tickerSymbol_ = other.tickerSymbol_;
+          onChanged();
+        }
+        if (!other.getCompanyName().isEmpty()) {
+          companyName_ = other.companyName_;
+          onChanged();
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                tickerSymbol_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+              case 18: {
+                companyName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private java.lang.Object tickerSymbol_ = "";
+      /**
+       * <code>string ticker_symbol = 1;</code>
+       * @return The tickerSymbol.
+       */
+      public java.lang.String getTickerSymbol() {
+        java.lang.Object ref = tickerSymbol_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          tickerSymbol_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ticker_symbol = 1;</code>
+       * @return The bytes for tickerSymbol.
+       */
+      public com.google.protobuf.ByteString
+      getTickerSymbolBytes() {
+        java.lang.Object ref = tickerSymbol_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          tickerSymbol_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ticker_symbol = 1;</code>
+       * @param value The tickerSymbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTickerSymbol(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        tickerSymbol_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ticker_symbol = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTickerSymbol() {
+
+        tickerSymbol_ = getDefaultInstance().getTickerSymbol();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ticker_symbol = 1;</code>
+       * @param value The bytes for tickerSymbol to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTickerSymbolBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        tickerSymbol_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object companyName_ = "";
+      /**
+       * <code>string company_name = 2;</code>
+       * @return The companyName.
+       */
+      public java.lang.String getCompanyName() {
+        java.lang.Object ref = companyName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          companyName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string company_name = 2;</code>
+       * @return The bytes for companyName.
+       */
+      public com.google.protobuf.ByteString
+      getCompanyNameBytes() {
+        java.lang.Object ref = companyName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          companyName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string company_name = 2;</code>
+       * @param value The companyName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompanyName(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        companyName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string company_name = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCompanyName() {
+
+        companyName_ = getDefaultInstance().getCompanyName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string company_name = 2;</code>
+       * @param value The bytes for companyName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCompanyNameBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        companyName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 3;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 3;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+      getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 3;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Stock)
+    }
+
+    // @@protoc_insertion_point(class_scope:Stock)
+    private static final com.lyyang.test.testgrpc.model.GreeterProto.Stock DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lyyang.test.testgrpc.model.GreeterProto.Stock();
+    }
+
+    public static com.lyyang.test.testgrpc.model.GreeterProto.Stock getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Stock>
+            PARSER = new com.google.protobuf.AbstractParser<Stock>() {
+      @java.lang.Override
+      public Stock parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<Stock> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Stock> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lyyang.test.testgrpc.model.GreeterProto.Stock getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StockQuoteOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:StockQuote)
+          com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>double price = 1;</code>
+     * @return The price.
+     */
+    double getPrice();
+
+    /**
+     * <code>int32 offer_number = 2;</code>
+     * @return The offerNumber.
+     */
+    int getOfferNumber();
+
+    /**
+     * <code>string description = 3;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 3;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+    getDescriptionBytes();
+  }
+  /**
+   * Protobuf type {@code StockQuote}
+   */
+  public static final class StockQuote extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:StockQuote)
+          StockQuoteOrBuilder {
+    private static final long serialVersionUID = 0L;
+    // Use StockQuote.newBuilder() to construct.
+    private StockQuote(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StockQuote() {
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+      return new StockQuote();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
+      return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_StockQuote_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_StockQuote_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      com.lyyang.test.testgrpc.model.GreeterProto.StockQuote.class, com.lyyang.test.testgrpc.model.GreeterProto.StockQuote.Builder.class);
+    }
+
+    public static final int PRICE_FIELD_NUMBER = 1;
+    private double price_;
+    /**
+     * <code>double price = 1;</code>
+     * @return The price.
+     */
+    @java.lang.Override
+    public double getPrice() {
+      return price_;
+    }
+
+    public static final int OFFER_NUMBER_FIELD_NUMBER = 2;
+    private int offerNumber_;
+    /**
+     * <code>int32 offer_number = 2;</code>
+     * @return The offerNumber.
+     */
+    @java.lang.Override
+    public int getOfferNumber() {
+      return offerNumber_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>string description = 3;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 3;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+            throws java.io.IOException {
+      if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
+        output.writeDouble(1, price_);
+      }
+      if (offerNumber_ != 0) {
+        output.writeInt32(2, offerNumber_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeDoubleSize(1, price_);
+      }
+      if (offerNumber_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+                .computeInt32Size(2, offerNumber_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+        return true;
+      }
+      if (!(obj instanceof com.lyyang.test.testgrpc.model.GreeterProto.StockQuote)) {
+        return super.equals(obj);
+      }
+      com.lyyang.test.testgrpc.model.GreeterProto.StockQuote other = (com.lyyang.test.testgrpc.model.GreeterProto.StockQuote) obj;
+
+      if (java.lang.Double.doubleToLongBits(getPrice())
+              != java.lang.Double.doubleToLongBits(
+              other.getPrice())) return false;
+      if (getOfferNumber()
+              != other.getOfferNumber()) return false;
+      if (!getDescription()
+              .equals(other.getDescription())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              java.lang.Double.doubleToLongBits(getPrice()));
+      hash = (37 * hash) + OFFER_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getOfferNumber();
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.lyyang.test.testgrpc.model.GreeterProto.StockQuote parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.StockQuote parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.StockQuote parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.StockQuote parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.StockQuote parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.StockQuote parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.StockQuote parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.StockQuote parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.StockQuote parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.StockQuote parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.StockQuote parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+    }
+    public static com.lyyang.test.testgrpc.model.GreeterProto.StockQuote parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.lyyang.test.testgrpc.model.GreeterProto.StockQuote prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code StockQuote}
+     */
+    public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:StockQuote)
+            com.lyyang.test.testgrpc.model.GreeterProto.StockQuoteOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+      getDescriptor() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_StockQuote_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_StockQuote_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        com.lyyang.test.testgrpc.model.GreeterProto.StockQuote.class, com.lyyang.test.testgrpc.model.GreeterProto.StockQuote.Builder.class);
+      }
+
+      // Construct using com.lyyang.test.testgrpc.model.GreeterProto.StockQuote.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        price_ = 0D;
+
+        offerNumber_ = 0;
+
+        description_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+      getDescriptorForType() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_StockQuote_descriptor;
+      }
+
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.StockQuote getDefaultInstanceForType() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.StockQuote.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.StockQuote build() {
+        com.lyyang.test.testgrpc.model.GreeterProto.StockQuote result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.StockQuote buildPartial() {
+        com.lyyang.test.testgrpc.model.GreeterProto.StockQuote result = new com.lyyang.test.testgrpc.model.GreeterProto.StockQuote(this);
+        result.price_ = price_;
+        result.offerNumber_ = offerNumber_;
+        result.description_ = description_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.lyyang.test.testgrpc.model.GreeterProto.StockQuote) {
+          return mergeFrom((com.lyyang.test.testgrpc.model.GreeterProto.StockQuote)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.lyyang.test.testgrpc.model.GreeterProto.StockQuote other) {
+        if (other == com.lyyang.test.testgrpc.model.GreeterProto.StockQuote.getDefaultInstance()) return this;
+        if (other.getPrice() != 0D) {
+          setPrice(other.getPrice());
+        }
+        if (other.getOfferNumber() != 0) {
+          setOfferNumber(other.getOfferNumber());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 9: {
+                price_ = input.readDouble();
+
+                break;
+              } // case 9
+              case 16: {
+                offerNumber_ = input.readInt32();
+
+                break;
+              } // case 16
+              case 26: {
+                description_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      private double price_ ;
+      /**
+       * <code>double price = 1;</code>
+       * @return The price.
+       */
+      @java.lang.Override
+      public double getPrice() {
+        return price_;
+      }
+      /**
+       * <code>double price = 1;</code>
+       * @param value The price to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrice(double value) {
+
+        price_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>double price = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrice() {
+
+        price_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private int offerNumber_ ;
+      /**
+       * <code>int32 offer_number = 2;</code>
+       * @return The offerNumber.
+       */
+      @java.lang.Override
+      public int getOfferNumber() {
+        return offerNumber_;
+      }
+      /**
+       * <code>int32 offer_number = 2;</code>
+       * @param value The offerNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOfferNumber(int value) {
+
+        offerNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 offer_number = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOfferNumber() {
+
+        offerNumber_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 3;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 3;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+      getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 3;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+              java.lang.String value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 3;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+              com.google.protobuf.ByteString value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:StockQuote)
+    }
+
+    // @@protoc_insertion_point(class_scope:StockQuote)
+    private static final com.lyyang.test.testgrpc.model.GreeterProto.StockQuote DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.lyyang.test.testgrpc.model.GreeterProto.StockQuote();
+    }
+
+    public static com.lyyang.test.testgrpc.model.GreeterProto.StockQuote getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StockQuote>
+            PARSER = new com.google.protobuf.AbstractParser<StockQuote>() {
+      @java.lang.Override
+      public StockQuote parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<StockQuote> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StockQuote> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.lyyang.test.testgrpc.model.GreeterProto.StockQuote getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HelloRequestOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:HelloRequest)
+          com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    java.lang.String getName();
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    com.google.protobuf.ByteString
+    getNameBytes();
+  }
+  /**
+   * <pre>
+   * The request message containing the user's name.
+   * </pre>
+   *
+   * Protobuf type {@code HelloRequest}
+   */
+  public static final class HelloRequest extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:HelloRequest)
+          HelloRequestOrBuilder {
+    private static final long serialVersionUID = 0L;
+    // Use HelloRequest.newBuilder() to construct.
+    private HelloRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HelloRequest() {
+      name_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+      return new HelloRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+    getDescriptor() {
+      return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_HelloRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_HelloRequest_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest.class, com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    private volatile java.lang.Object name_;
+    /**
+     * <code>string name = 1;</code>
+     * @return The name.
+     */
+    @java.lang.Override
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string name = 1;</code>
+     * @return The bytes for name.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+    getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+            throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
       }
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -147,23 +1685,23 @@ public final class GreeterProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
-      if (!(obj instanceof HelloRequest)) {
+      if (!(obj instanceof com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest)) {
         return super.equals(obj);
       }
-      HelloRequest other = (HelloRequest) obj;
+      com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest other = (com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest) obj;
 
       if (!getName()
-          .equals(other.getName())) return false;
+              .equals(other.getName())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -177,93 +1715,93 @@ public final class GreeterProto {
       return hash;
     }
 
-    public static HelloRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static HelloRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static HelloRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static HelloRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static HelloRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static HelloRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static HelloRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
-    public static HelloRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static HelloRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+              .parseDelimitedWithIOException(PARSER, input);
     }
-    public static HelloRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static HelloRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
-    public static HelloRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(HelloRequest prototype) {
+    public static Builder newBuilder(com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+              ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -275,20 +1813,20 @@ public final class GreeterProto {
      * Protobuf type {@code HelloRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:HelloRequest)
-        HelloRequestOrBuilder {
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:HelloRequest)
+            com.lyyang.test.testgrpc.model.GreeterProto.HelloRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return GreeterProto.internal_static_HelloRequest_descriptor;
+      getDescriptor() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_HelloRequest_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return GreeterProto.internal_static_HelloRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                HelloRequest.class, Builder.class);
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_HelloRequest_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest.class, com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest.Builder.class);
       }
 
       // Construct using com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest.newBuilder()
@@ -297,11 +1835,11 @@ public final class GreeterProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         name_ = "";
@@ -309,78 +1847,78 @@ public final class GreeterProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return GreeterProto.internal_static_HelloRequest_descriptor;
+      getDescriptorForType() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_HelloRequest_descriptor;
       }
 
-      @Override
-      public HelloRequest getDefaultInstanceForType() {
-        return HelloRequest.getDefaultInstance();
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest getDefaultInstanceForType() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest.getDefaultInstance();
       }
 
-      @Override
-      public HelloRequest build() {
-        HelloRequest result = buildPartial();
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest build() {
+        com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public HelloRequest buildPartial() {
-        HelloRequest result = new HelloRequest(this);
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest buildPartial() {
+        com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest result = new com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest(this);
         result.name_ = name_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof HelloRequest) {
-          return mergeFrom((HelloRequest)other);
+        if (other instanceof com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest) {
+          return mergeFrom((com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(HelloRequest other) {
-        if (other == HelloRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest other) {
+        if (other == com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
           onChanged();
@@ -390,18 +1928,18 @@ public final class GreeterProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -432,21 +1970,21 @@ public final class GreeterProto {
         return this;
       }
 
-      private Object name_ = "";
+      private java.lang.Object name_ = "";
       /**
        * <code>string name = 1;</code>
        * @return The name.
        */
-      public String getName() {
-        Object ref = name_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getName() {
+        java.lang.Object ref = name_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           name_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -454,12 +1992,12 @@ public final class GreeterProto {
        * @return The bytes for name.
        */
       public com.google.protobuf.ByteString
-          getNameBytes() {
-        Object ref = name_;
+      getNameBytes() {
+        java.lang.Object ref = name_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
@@ -472,11 +2010,11 @@ public final class GreeterProto {
        * @return This builder for chaining.
        */
       public Builder setName(
-          String value) {
+              java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         name_ = value;
         onChanged();
         return this;
@@ -486,7 +2024,7 @@ public final class GreeterProto {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
+
         name_ = getDefaultInstance().getName();
         onChanged();
         return this;
@@ -497,25 +2035,25 @@ public final class GreeterProto {
        * @return This builder for chaining.
        */
       public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         name_ = value;
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -524,22 +2062,22 @@ public final class GreeterProto {
     }
 
     // @@protoc_insertion_point(class_scope:HelloRequest)
-    private static final HelloRequest DEFAULT_INSTANCE;
+    private static final com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new HelloRequest();
+      DEFAULT_INSTANCE = new com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest();
     }
 
-    public static HelloRequest getDefaultInstance() {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<HelloRequest>
-        PARSER = new com.google.protobuf.AbstractParser<HelloRequest>() {
-      @Override
+            PARSER = new com.google.protobuf.AbstractParser<HelloRequest>() {
+      @java.lang.Override
       public HelloRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
         Builder builder = newBuilder();
         try {
           builder.mergeFrom(input, extensionRegistry);
@@ -549,7 +2087,7 @@ public final class GreeterProto {
           throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
+                  .setUnfinishedMessage(builder.buildPartial());
         }
         return builder.buildPartial();
       }
@@ -559,54 +2097,54 @@ public final class GreeterProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<HelloRequest> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public HelloRequest getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.lyyang.test.testgrpc.model.GreeterProto.HelloRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface AuthRequestOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:AuthRequest)
-      com.google.protobuf.MessageOrBuilder {
+          // @@protoc_insertion_point(interface_extends:AuthRequest)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>string username = 1;</code>
      * @return The username.
      */
-    String getUsername();
+    java.lang.String getUsername();
     /**
      * <code>string username = 1;</code>
      * @return The bytes for username.
      */
     com.google.protobuf.ByteString
-        getUsernameBytes();
+    getUsernameBytes();
 
     /**
      * <code>string password = 2;</code>
      * @return The password.
      */
-    String getPassword();
+    java.lang.String getPassword();
     /**
      * <code>string password = 2;</code>
      * @return The bytes for password.
      */
     com.google.protobuf.ByteString
-        getPasswordBytes();
+    getPasswordBytes();
   }
   /**
    * Protobuf type {@code AuthRequest}
    */
   public static final class AuthRequest extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:AuthRequest)
-      AuthRequestOrBuilder {
-  private static final long serialVersionUID = 0L;
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:AuthRequest)
+          AuthRequestOrBuilder {
+    private static final long serialVersionUID = 0L;
     // Use AuthRequest.newBuilder() to construct.
     private AuthRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -616,46 +2154,46 @@ public final class GreeterProto {
       password_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
       return new AuthRequest();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return GreeterProto.internal_static_AuthRequest_descriptor;
+    getDescriptor() {
+      return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_AuthRequest_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return GreeterProto.internal_static_AuthRequest_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              AuthRequest.class, Builder.class);
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_AuthRequest_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest.class, com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest.Builder.class);
     }
 
     public static final int USERNAME_FIELD_NUMBER = 1;
-    private volatile Object username_;
+    private volatile java.lang.Object username_;
     /**
      * <code>string username = 1;</code>
      * @return The username.
      */
-    @Override
-    public String getUsername() {
-      Object ref = username_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getUsername() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
         username_ = s;
         return s;
       }
@@ -664,14 +2202,14 @@ public final class GreeterProto {
      * <code>string username = 1;</code>
      * @return The bytes for username.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getUsernameBytes() {
-      Object ref = username_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+    getUsernameBytes() {
+      java.lang.Object ref = username_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         username_ = b;
         return b;
       } else {
@@ -680,20 +2218,20 @@ public final class GreeterProto {
     }
 
     public static final int PASSWORD_FIELD_NUMBER = 2;
-    private volatile Object password_;
+    private volatile java.lang.Object password_;
     /**
      * <code>string password = 2;</code>
      * @return The password.
      */
-    @Override
-    public String getPassword() {
-      Object ref = password_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getPassword() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
         password_ = s;
         return s;
       }
@@ -702,14 +2240,14 @@ public final class GreeterProto {
      * <code>string password = 2;</code>
      * @return The bytes for password.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getPasswordBytes() {
-      Object ref = password_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+    getPasswordBytes() {
+      java.lang.Object ref = password_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         password_ = b;
         return b;
       } else {
@@ -718,7 +2256,7 @@ public final class GreeterProto {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -728,9 +2266,9 @@ public final class GreeterProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+            throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(username_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, username_);
       }
@@ -740,7 +2278,7 @@ public final class GreeterProto {
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -757,25 +2295,25 @@ public final class GreeterProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
-      if (!(obj instanceof AuthRequest)) {
+      if (!(obj instanceof com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest)) {
         return super.equals(obj);
       }
-      AuthRequest other = (AuthRequest) obj;
+      com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest other = (com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest) obj;
 
       if (!getUsername()
-          .equals(other.getUsername())) return false;
+              .equals(other.getUsername())) return false;
       if (!getPassword()
-          .equals(other.getPassword())) return false;
+              .equals(other.getPassword())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -791,93 +2329,93 @@ public final class GreeterProto {
       return hash;
     }
 
-    public static AuthRequest parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static AuthRequest parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static AuthRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static AuthRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static AuthRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static AuthRequest parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static AuthRequest parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
-    public static AuthRequest parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static AuthRequest parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+              .parseDelimitedWithIOException(PARSER, input);
     }
-    public static AuthRequest parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static AuthRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
-    public static AuthRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(AuthRequest prototype) {
+    public static Builder newBuilder(com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+              ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -885,20 +2423,20 @@ public final class GreeterProto {
      * Protobuf type {@code AuthRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:AuthRequest)
-        AuthRequestOrBuilder {
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:AuthRequest)
+            com.lyyang.test.testgrpc.model.GreeterProto.AuthRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return GreeterProto.internal_static_AuthRequest_descriptor;
+      getDescriptor() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_AuthRequest_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return GreeterProto.internal_static_AuthRequest_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                AuthRequest.class, Builder.class);
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_AuthRequest_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest.class, com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest.Builder.class);
       }
 
       // Construct using com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest.newBuilder()
@@ -907,11 +2445,11 @@ public final class GreeterProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         username_ = "";
@@ -921,79 +2459,79 @@ public final class GreeterProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return GreeterProto.internal_static_AuthRequest_descriptor;
+      getDescriptorForType() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_AuthRequest_descriptor;
       }
 
-      @Override
-      public AuthRequest getDefaultInstanceForType() {
-        return AuthRequest.getDefaultInstance();
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest getDefaultInstanceForType() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest.getDefaultInstance();
       }
 
-      @Override
-      public AuthRequest build() {
-        AuthRequest result = buildPartial();
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest build() {
+        com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public AuthRequest buildPartial() {
-        AuthRequest result = new AuthRequest(this);
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest buildPartial() {
+        com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest result = new com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest(this);
         result.username_ = username_;
         result.password_ = password_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof AuthRequest) {
-          return mergeFrom((AuthRequest)other);
+        if (other instanceof com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest) {
+          return mergeFrom((com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(AuthRequest other) {
-        if (other == AuthRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest other) {
+        if (other == com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest.getDefaultInstance()) return this;
         if (!other.getUsername().isEmpty()) {
           username_ = other.username_;
           onChanged();
@@ -1007,18 +2545,18 @@ public final class GreeterProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -1054,21 +2592,21 @@ public final class GreeterProto {
         return this;
       }
 
-      private Object username_ = "";
+      private java.lang.Object username_ = "";
       /**
        * <code>string username = 1;</code>
        * @return The username.
        */
-      public String getUsername() {
-        Object ref = username_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getUsername() {
+        java.lang.Object ref = username_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           username_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1076,12 +2614,12 @@ public final class GreeterProto {
        * @return The bytes for username.
        */
       public com.google.protobuf.ByteString
-          getUsernameBytes() {
-        Object ref = username_;
+      getUsernameBytes() {
+        java.lang.Object ref = username_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           username_ = b;
           return b;
         } else {
@@ -1094,11 +2632,11 @@ public final class GreeterProto {
        * @return This builder for chaining.
        */
       public Builder setUsername(
-          String value) {
+              java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         username_ = value;
         onChanged();
         return this;
@@ -1108,7 +2646,7 @@ public final class GreeterProto {
        * @return This builder for chaining.
        */
       public Builder clearUsername() {
-        
+
         username_ = getDefaultInstance().getUsername();
         onChanged();
         return this;
@@ -1119,32 +2657,32 @@ public final class GreeterProto {
        * @return This builder for chaining.
        */
       public Builder setUsernameBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         username_ = value;
         onChanged();
         return this;
       }
 
-      private Object password_ = "";
+      private java.lang.Object password_ = "";
       /**
        * <code>string password = 2;</code>
        * @return The password.
        */
-      public String getPassword() {
-        Object ref = password_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           password_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1152,12 +2690,12 @@ public final class GreeterProto {
        * @return The bytes for password.
        */
       public com.google.protobuf.ByteString
-          getPasswordBytes() {
-        Object ref = password_;
+      getPasswordBytes() {
+        java.lang.Object ref = password_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           password_ = b;
           return b;
         } else {
@@ -1170,11 +2708,11 @@ public final class GreeterProto {
        * @return This builder for chaining.
        */
       public Builder setPassword(
-          String value) {
+              java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         password_ = value;
         onChanged();
         return this;
@@ -1184,7 +2722,7 @@ public final class GreeterProto {
        * @return This builder for chaining.
        */
       public Builder clearPassword() {
-        
+
         password_ = getDefaultInstance().getPassword();
         onChanged();
         return this;
@@ -1195,25 +2733,25 @@ public final class GreeterProto {
        * @return This builder for chaining.
        */
       public Builder setPasswordBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         password_ = value;
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -1222,22 +2760,22 @@ public final class GreeterProto {
     }
 
     // @@protoc_insertion_point(class_scope:AuthRequest)
-    private static final AuthRequest DEFAULT_INSTANCE;
+    private static final com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new AuthRequest();
+      DEFAULT_INSTANCE = new com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest();
     }
 
-    public static AuthRequest getDefaultInstance() {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<AuthRequest>
-        PARSER = new com.google.protobuf.AbstractParser<AuthRequest>() {
-      @Override
+            PARSER = new com.google.protobuf.AbstractParser<AuthRequest>() {
+      @java.lang.Override
       public AuthRequest parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
         Builder builder = newBuilder();
         try {
           builder.mergeFrom(input, extensionRegistry);
@@ -1247,7 +2785,7 @@ public final class GreeterProto {
           throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
+                  .setUnfinishedMessage(builder.buildPartial());
         }
         return builder.buildPartial();
       }
@@ -1257,33 +2795,33 @@ public final class GreeterProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<AuthRequest> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public AuthRequest getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.lyyang.test.testgrpc.model.GreeterProto.AuthRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface HelloReplyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:HelloReply)
-      com.google.protobuf.MessageOrBuilder {
+          // @@protoc_insertion_point(interface_extends:HelloReply)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>string message = 1;</code>
      * @return The message.
      */
-    String getMessage();
+    java.lang.String getMessage();
     /**
      * <code>string message = 1;</code>
      * @return The bytes for message.
      */
     com.google.protobuf.ByteString
-        getMessageBytes();
+    getMessageBytes();
   }
   /**
    * <pre>
@@ -1293,10 +2831,10 @@ public final class GreeterProto {
    * Protobuf type {@code HelloReply}
    */
   public static final class HelloReply extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:HelloReply)
-      HelloReplyOrBuilder {
-  private static final long serialVersionUID = 0L;
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:HelloReply)
+          HelloReplyOrBuilder {
+    private static final long serialVersionUID = 0L;
     // Use HelloReply.newBuilder() to construct.
     private HelloReply(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -1305,46 +2843,46 @@ public final class GreeterProto {
       message_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
       return new HelloReply();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return GreeterProto.internal_static_HelloReply_descriptor;
+    getDescriptor() {
+      return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_HelloReply_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return GreeterProto.internal_static_HelloReply_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              HelloReply.class, Builder.class);
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_HelloReply_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      com.lyyang.test.testgrpc.model.GreeterProto.HelloReply.class, com.lyyang.test.testgrpc.model.GreeterProto.HelloReply.Builder.class);
     }
 
     public static final int MESSAGE_FIELD_NUMBER = 1;
-    private volatile Object message_;
+    private volatile java.lang.Object message_;
     /**
      * <code>string message = 1;</code>
      * @return The message.
      */
-    @Override
-    public String getMessage() {
-      Object ref = message_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getMessage() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
         message_ = s;
         return s;
       }
@@ -1353,14 +2891,14 @@ public final class GreeterProto {
      * <code>string message = 1;</code>
      * @return The bytes for message.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getMessageBytes() {
-      Object ref = message_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+    getMessageBytes() {
+      java.lang.Object ref = message_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         message_ = b;
         return b;
       } else {
@@ -1369,7 +2907,7 @@ public final class GreeterProto {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1379,16 +2917,16 @@ public final class GreeterProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+            throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
       }
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1402,23 +2940,23 @@ public final class GreeterProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
-      if (!(obj instanceof HelloReply)) {
+      if (!(obj instanceof com.lyyang.test.testgrpc.model.GreeterProto.HelloReply)) {
         return super.equals(obj);
       }
-      HelloReply other = (HelloReply) obj;
+      com.lyyang.test.testgrpc.model.GreeterProto.HelloReply other = (com.lyyang.test.testgrpc.model.GreeterProto.HelloReply) obj;
 
       if (!getMessage()
-          .equals(other.getMessage())) return false;
+              .equals(other.getMessage())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1432,93 +2970,93 @@ public final class GreeterProto {
       return hash;
     }
 
-    public static HelloReply parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloReply parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static HelloReply parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloReply parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static HelloReply parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloReply parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static HelloReply parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloReply parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static HelloReply parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloReply parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static HelloReply parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloReply parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static HelloReply parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloReply parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
-    public static HelloReply parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloReply parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static HelloReply parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloReply parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+              .parseDelimitedWithIOException(PARSER, input);
     }
-    public static HelloReply parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloReply parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static HelloReply parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloReply parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
-    public static HelloReply parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloReply parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(HelloReply prototype) {
+    public static Builder newBuilder(com.lyyang.test.testgrpc.model.GreeterProto.HelloReply prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+              ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1530,20 +3068,20 @@ public final class GreeterProto {
      * Protobuf type {@code HelloReply}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:HelloReply)
-        HelloReplyOrBuilder {
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:HelloReply)
+            com.lyyang.test.testgrpc.model.GreeterProto.HelloReplyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return GreeterProto.internal_static_HelloReply_descriptor;
+      getDescriptor() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_HelloReply_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return GreeterProto.internal_static_HelloReply_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                HelloReply.class, Builder.class);
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_HelloReply_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        com.lyyang.test.testgrpc.model.GreeterProto.HelloReply.class, com.lyyang.test.testgrpc.model.GreeterProto.HelloReply.Builder.class);
       }
 
       // Construct using com.lyyang.test.testgrpc.model.GreeterProto.HelloReply.newBuilder()
@@ -1552,11 +3090,11 @@ public final class GreeterProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         message_ = "";
@@ -1564,78 +3102,78 @@ public final class GreeterProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return GreeterProto.internal_static_HelloReply_descriptor;
+      getDescriptorForType() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_HelloReply_descriptor;
       }
 
-      @Override
-      public HelloReply getDefaultInstanceForType() {
-        return HelloReply.getDefaultInstance();
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.HelloReply getDefaultInstanceForType() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.HelloReply.getDefaultInstance();
       }
 
-      @Override
-      public HelloReply build() {
-        HelloReply result = buildPartial();
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.HelloReply build() {
+        com.lyyang.test.testgrpc.model.GreeterProto.HelloReply result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public HelloReply buildPartial() {
-        HelloReply result = new HelloReply(this);
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.HelloReply buildPartial() {
+        com.lyyang.test.testgrpc.model.GreeterProto.HelloReply result = new com.lyyang.test.testgrpc.model.GreeterProto.HelloReply(this);
         result.message_ = message_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof HelloReply) {
-          return mergeFrom((HelloReply)other);
+        if (other instanceof com.lyyang.test.testgrpc.model.GreeterProto.HelloReply) {
+          return mergeFrom((com.lyyang.test.testgrpc.model.GreeterProto.HelloReply)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(HelloReply other) {
-        if (other == HelloReply.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.lyyang.test.testgrpc.model.GreeterProto.HelloReply other) {
+        if (other == com.lyyang.test.testgrpc.model.GreeterProto.HelloReply.getDefaultInstance()) return this;
         if (!other.getMessage().isEmpty()) {
           message_ = other.message_;
           onChanged();
@@ -1645,18 +3183,18 @@ public final class GreeterProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -1687,21 +3225,21 @@ public final class GreeterProto {
         return this;
       }
 
-      private Object message_ = "";
+      private java.lang.Object message_ = "";
       /**
        * <code>string message = 1;</code>
        * @return The message.
        */
-      public String getMessage() {
-        Object ref = message_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getMessage() {
+        java.lang.Object ref = message_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           message_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -1709,12 +3247,12 @@ public final class GreeterProto {
        * @return The bytes for message.
        */
       public com.google.protobuf.ByteString
-          getMessageBytes() {
-        Object ref = message_;
+      getMessageBytes() {
+        java.lang.Object ref = message_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           message_ = b;
           return b;
         } else {
@@ -1727,11 +3265,11 @@ public final class GreeterProto {
        * @return This builder for chaining.
        */
       public Builder setMessage(
-          String value) {
+              java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         message_ = value;
         onChanged();
         return this;
@@ -1741,7 +3279,7 @@ public final class GreeterProto {
        * @return This builder for chaining.
        */
       public Builder clearMessage() {
-        
+
         message_ = getDefaultInstance().getMessage();
         onChanged();
         return this;
@@ -1752,25 +3290,25 @@ public final class GreeterProto {
        * @return This builder for chaining.
        */
       public Builder setMessageBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         message_ = value;
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -1779,22 +3317,22 @@ public final class GreeterProto {
     }
 
     // @@protoc_insertion_point(class_scope:HelloReply)
-    private static final HelloReply DEFAULT_INSTANCE;
+    private static final com.lyyang.test.testgrpc.model.GreeterProto.HelloReply DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new HelloReply();
+      DEFAULT_INSTANCE = new com.lyyang.test.testgrpc.model.GreeterProto.HelloReply();
     }
 
-    public static HelloReply getDefaultInstance() {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.HelloReply getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<HelloReply>
-        PARSER = new com.google.protobuf.AbstractParser<HelloReply>() {
-      @Override
+            PARSER = new com.google.protobuf.AbstractParser<HelloReply>() {
+      @java.lang.Override
       public HelloReply parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
         Builder builder = newBuilder();
         try {
           builder.mergeFrom(input, extensionRegistry);
@@ -1804,7 +3342,7 @@ public final class GreeterProto {
           throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
+                  .setUnfinishedMessage(builder.buildPartial());
         }
         return builder.buildPartial();
       }
@@ -1814,42 +3352,42 @@ public final class GreeterProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<HelloReply> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public HelloReply getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.lyyang.test.testgrpc.model.GreeterProto.HelloReply getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   public interface AuthReplyOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:AuthReply)
-      com.google.protobuf.MessageOrBuilder {
+          // @@protoc_insertion_point(interface_extends:AuthReply)
+          com.google.protobuf.MessageOrBuilder {
 
     /**
      * <code>string token = 1;</code>
      * @return The token.
      */
-    String getToken();
+    java.lang.String getToken();
     /**
      * <code>string token = 1;</code>
      * @return The bytes for token.
      */
     com.google.protobuf.ByteString
-        getTokenBytes();
+    getTokenBytes();
   }
   /**
    * Protobuf type {@code AuthReply}
    */
   public static final class AuthReply extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:AuthReply)
-      AuthReplyOrBuilder {
-  private static final long serialVersionUID = 0L;
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:AuthReply)
+          AuthReplyOrBuilder {
+    private static final long serialVersionUID = 0L;
     // Use AuthReply.newBuilder() to construct.
     private AuthReply(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
@@ -1858,46 +3396,46 @@ public final class GreeterProto {
       token_ = "";
     }
 
-    @Override
+    @java.lang.Override
     @SuppressWarnings({"unused"})
-    protected Object newInstance(
-        UnusedPrivateParameter unused) {
+    protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
       return new AuthReply();
     }
 
-    @Override
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
     }
     public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return GreeterProto.internal_static_AuthReply_descriptor;
+    getDescriptor() {
+      return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_AuthReply_descriptor;
     }
 
-    @Override
-    protected FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return GreeterProto.internal_static_AuthReply_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              AuthReply.class, Builder.class);
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internalGetFieldAccessorTable() {
+      return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_AuthReply_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                      com.lyyang.test.testgrpc.model.GreeterProto.AuthReply.class, com.lyyang.test.testgrpc.model.GreeterProto.AuthReply.Builder.class);
     }
 
     public static final int TOKEN_FIELD_NUMBER = 1;
-    private volatile Object token_;
+    private volatile java.lang.Object token_;
     /**
      * <code>string token = 1;</code>
      * @return The token.
      */
-    @Override
-    public String getToken() {
-      Object ref = token_;
-      if (ref instanceof String) {
-        return (String) ref;
+    @java.lang.Override
+    public java.lang.String getToken() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
         token_ = s;
         return s;
       }
@@ -1906,14 +3444,14 @@ public final class GreeterProto {
      * <code>string token = 1;</code>
      * @return The bytes for token.
      */
-    @Override
+    @java.lang.Override
     public com.google.protobuf.ByteString
-        getTokenBytes() {
-      Object ref = token_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+    getTokenBytes() {
+      java.lang.Object ref = token_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b =
+                com.google.protobuf.ByteString.copyFromUtf8(
+                        (java.lang.String) ref);
         token_ = b;
         return b;
       } else {
@@ -1922,7 +3460,7 @@ public final class GreeterProto {
     }
 
     private byte memoizedIsInitialized = -1;
-    @Override
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1932,16 +3470,16 @@ public final class GreeterProto {
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
+            throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(token_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, token_);
       }
       getUnknownFields().writeTo(output);
     }
 
-    @Override
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1955,23 +3493,23 @@ public final class GreeterProto {
       return size;
     }
 
-    @Override
-    public boolean equals(final Object obj) {
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-       return true;
+        return true;
       }
-      if (!(obj instanceof AuthReply)) {
+      if (!(obj instanceof com.lyyang.test.testgrpc.model.GreeterProto.AuthReply)) {
         return super.equals(obj);
       }
-      AuthReply other = (AuthReply) obj;
+      com.lyyang.test.testgrpc.model.GreeterProto.AuthReply other = (com.lyyang.test.testgrpc.model.GreeterProto.AuthReply) obj;
 
       if (!getToken()
-          .equals(other.getToken())) return false;
+              .equals(other.getToken())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
-    @Override
+    @java.lang.Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1985,93 +3523,93 @@ public final class GreeterProto {
       return hash;
     }
 
-    public static AuthReply parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthReply parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static AuthReply parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthReply parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static AuthReply parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthReply parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static AuthReply parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthReply parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static AuthReply parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthReply parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static AuthReply parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthReply parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static AuthReply parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthReply parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
-    public static AuthReply parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthReply parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static AuthReply parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthReply parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
+              .parseDelimitedWithIOException(PARSER, input);
     }
-    public static AuthReply parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthReply parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static AuthReply parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthReply parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
+              .parseWithIOException(PARSER, input);
     }
-    public static AuthReply parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthReply parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
+              .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @Override
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(AuthReply prototype) {
+    public static Builder newBuilder(com.lyyang.test.testgrpc.model.GreeterProto.AuthReply prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @Override
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
+              ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @Override
+    @java.lang.Override
     protected Builder newBuilderForType(
-        BuilderParent parent) {
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2079,20 +3617,20 @@ public final class GreeterProto {
      * Protobuf type {@code AuthReply}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:AuthReply)
-        AuthReplyOrBuilder {
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:AuthReply)
+            com.lyyang.test.testgrpc.model.GreeterProto.AuthReplyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return GreeterProto.internal_static_AuthReply_descriptor;
+      getDescriptor() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_AuthReply_descriptor;
       }
 
-      @Override
-      protected FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return GreeterProto.internal_static_AuthReply_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                AuthReply.class, Builder.class);
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internalGetFieldAccessorTable() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_AuthReply_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                        com.lyyang.test.testgrpc.model.GreeterProto.AuthReply.class, com.lyyang.test.testgrpc.model.GreeterProto.AuthReply.Builder.class);
       }
 
       // Construct using com.lyyang.test.testgrpc.model.GreeterProto.AuthReply.newBuilder()
@@ -2101,11 +3639,11 @@ public final class GreeterProto {
       }
 
       private Builder(
-          BuilderParent parent) {
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
 
       }
-      @Override
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         token_ = "";
@@ -2113,78 +3651,78 @@ public final class GreeterProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return GreeterProto.internal_static_AuthReply_descriptor;
+      getDescriptorForType() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.internal_static_AuthReply_descriptor;
       }
 
-      @Override
-      public AuthReply getDefaultInstanceForType() {
-        return AuthReply.getDefaultInstance();
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.AuthReply getDefaultInstanceForType() {
+        return com.lyyang.test.testgrpc.model.GreeterProto.AuthReply.getDefaultInstance();
       }
 
-      @Override
-      public AuthReply build() {
-        AuthReply result = buildPartial();
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.AuthReply build() {
+        com.lyyang.test.testgrpc.model.GreeterProto.AuthReply result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @Override
-      public AuthReply buildPartial() {
-        AuthReply result = new AuthReply(this);
+      @java.lang.Override
+      public com.lyyang.test.testgrpc.model.GreeterProto.AuthReply buildPartial() {
+        com.lyyang.test.testgrpc.model.GreeterProto.AuthReply result = new com.lyyang.test.testgrpc.model.GreeterProto.AuthReply(this);
         result.token_ = token_;
         onBuilt();
         return result;
       }
 
-      @Override
+      @java.lang.Override
       public Builder clone() {
         return super.clone();
       }
-      @Override
+      @java.lang.Override
       public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
         return super.setField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
         return super.clearField(field);
       }
-      @Override
+      @java.lang.Override
       public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
         return super.clearOneof(oneof);
       }
-      @Override
+      @java.lang.Override
       public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
         return super.setRepeatedField(field, index, value);
       }
-      @Override
+      @java.lang.Override
       public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          Object value) {
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
         return super.addRepeatedField(field, value);
       }
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof AuthReply) {
-          return mergeFrom((AuthReply)other);
+        if (other instanceof com.lyyang.test.testgrpc.model.GreeterProto.AuthReply) {
+          return mergeFrom((com.lyyang.test.testgrpc.model.GreeterProto.AuthReply)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(AuthReply other) {
-        if (other == AuthReply.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.lyyang.test.testgrpc.model.GreeterProto.AuthReply other) {
+        if (other == com.lyyang.test.testgrpc.model.GreeterProto.AuthReply.getDefaultInstance()) return this;
         if (!other.getToken().isEmpty()) {
           token_ = other.token_;
           onChanged();
@@ -2194,18 +3732,18 @@ public final class GreeterProto {
         return this;
       }
 
-      @Override
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @Override
+      @java.lang.Override
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new NullPointerException();
+          throw new java.lang.NullPointerException();
         }
         try {
           boolean done = false;
@@ -2236,21 +3774,21 @@ public final class GreeterProto {
         return this;
       }
 
-      private Object token_ = "";
+      private java.lang.Object token_ = "";
       /**
        * <code>string token = 1;</code>
        * @return The token.
        */
-      public String getToken() {
-        Object ref = token_;
-        if (!(ref instanceof String)) {
+      public java.lang.String getToken() {
+        java.lang.Object ref = token_;
+        if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          String s = bs.toStringUtf8();
+                  (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
           token_ = s;
           return s;
         } else {
-          return (String) ref;
+          return (java.lang.String) ref;
         }
       }
       /**
@@ -2258,12 +3796,12 @@ public final class GreeterProto {
        * @return The bytes for token.
        */
       public com.google.protobuf.ByteString
-          getTokenBytes() {
-        Object ref = token_;
+      getTokenBytes() {
+        java.lang.Object ref = token_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (String) ref);
+          com.google.protobuf.ByteString b =
+                  com.google.protobuf.ByteString.copyFromUtf8(
+                          (java.lang.String) ref);
           token_ = b;
           return b;
         } else {
@@ -2276,11 +3814,11 @@ public final class GreeterProto {
        * @return This builder for chaining.
        */
       public Builder setToken(
-          String value) {
+              java.lang.String value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          throw new NullPointerException();
+        }
+
         token_ = value;
         onChanged();
         return this;
@@ -2290,7 +3828,7 @@ public final class GreeterProto {
        * @return This builder for chaining.
        */
       public Builder clearToken() {
-        
+
         token_ = getDefaultInstance().getToken();
         onChanged();
         return this;
@@ -2301,25 +3839,25 @@ public final class GreeterProto {
        * @return This builder for chaining.
        */
       public Builder setTokenBytes(
-          com.google.protobuf.ByteString value) {
+              com.google.protobuf.ByteString value) {
         if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+          throw new NullPointerException();
+        }
+        checkByteStringIsUtf8(value);
+
         token_ = value;
         onChanged();
         return this;
       }
-      @Override
+      @java.lang.Override
       public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @Override
+      @java.lang.Override
       public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
       }
 
@@ -2328,22 +3866,22 @@ public final class GreeterProto {
     }
 
     // @@protoc_insertion_point(class_scope:AuthReply)
-    private static final AuthReply DEFAULT_INSTANCE;
+    private static final com.lyyang.test.testgrpc.model.GreeterProto.AuthReply DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new AuthReply();
+      DEFAULT_INSTANCE = new com.lyyang.test.testgrpc.model.GreeterProto.AuthReply();
     }
 
-    public static AuthReply getDefaultInstance() {
+    public static com.lyyang.test.testgrpc.model.GreeterProto.AuthReply getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<AuthReply>
-        PARSER = new com.google.protobuf.AbstractParser<AuthReply>() {
-      @Override
+            PARSER = new com.google.protobuf.AbstractParser<AuthReply>() {
+      @java.lang.Override
       public AuthReply parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
         Builder builder = newBuilder();
         try {
           builder.mergeFrom(input, extensionRegistry);
@@ -2353,7 +3891,7 @@ public final class GreeterProto {
           throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
         } catch (java.io.IOException e) {
           throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
+                  .setUnfinishedMessage(builder.buildPartial());
         }
         return builder.buildPartial();
       }
@@ -2363,85 +3901,113 @@ public final class GreeterProto {
       return PARSER;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Parser<AuthReply> getParserForType() {
       return PARSER;
     }
 
-    @Override
-    public AuthReply getDefaultInstanceForType() {
+    @java.lang.Override
+    public com.lyyang.test.testgrpc.model.GreeterProto.AuthReply getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_HelloRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_HelloRequest_fieldAccessorTable;
+          internal_static_Stock_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_Stock_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_AuthRequest_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_AuthRequest_fieldAccessorTable;
+          internal_static_StockQuote_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_StockQuote_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_HelloReply_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_HelloReply_fieldAccessorTable;
+          internal_static_HelloRequest_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_HelloRequest_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_AuthReply_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_AuthReply_fieldAccessorTable;
+          internal_static_AuthRequest_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_AuthRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_HelloReply_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_HelloReply_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+          internal_static_AuthReply_descriptor;
+  private static final
+  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internal_static_AuthReply_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
+  getDescriptor() {
     return descriptor;
   }
   private static  com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
+          descriptor;
   static {
-    String[] descriptorData = {
-      "\n\rgreeter.proto\"\034\n\014HelloRequest\022\014\n\004name\030" +
-      "\001 \001(\t\"1\n\013AuthRequest\022\020\n\010username\030\001 \001(\t\022\020" +
-      "\n\010password\030\002 \001(\t\"\035\n\nHelloReply\022\017\n\007messag" +
-      "e\030\001 \001(\t\"\032\n\tAuthReply\022\r\n\005token\030\001 \001(\t2\216\001\n\007" +
-      "Greeter\022(\n\010SayHello\022\r.HelloRequest\032\013.Hel" +
-      "loReply\"\000\022-\n\rSayHelloAdmin\022\r.HelloReques" +
-      "t\032\013.HelloReply\"\000\022*\n\014Authenticate\022\014.AuthR" +
-      "equest\032\n.AuthReply\"\000B.\n\036com.lyyang.test." +
-      "testgrpc.modelB\014GreeterProtob\006proto3"
+    java.lang.String[] descriptorData = {
+            "\n\rgreeter.proto\"I\n\005Stock\022\025\n\rticker_symbo" +
+                    "l\030\001 \001(\t\022\024\n\014company_name\030\002 \001(\t\022\023\n\013descrip" +
+                    "tion\030\003 \001(\t\"F\n\nStockQuote\022\r\n\005price\030\001 \001(\001\022" +
+                    "\024\n\014offer_number\030\002 \001(\005\022\023\n\013description\030\003 \001" +
+                    "(\t\"\034\n\014HelloRequest\022\014\n\004name\030\001 \001(\t\"1\n\013Auth" +
+                    "Request\022\020\n\010username\030\001 \001(\t\022\020\n\010password\030\002 " +
+                    "\001(\t\"\035\n\nHelloReply\022\017\n\007message\030\001 \001(\t\"\032\n\tAu" +
+                    "thReply\022\r\n\005token\030\001 \001(\t2\320\001\n\007Greeter\022(\n\010Sa" +
+                    "yHello\022\r.HelloRequest\032\013.HelloReply\"\000\022-\n\r" +
+                    "SayHelloAdmin\022\r.HelloRequest\032\013.HelloRepl" +
+                    "y\"\000\022*\n\014Authenticate\022\014.AuthRequest\032\n.Auth" +
+                    "Reply\"\000\022@\n%serverSideStreamingGetListSto" +
+                    "ckQuotes\022\006.Stock\032\013.StockQuote\"\0000\001B.\n\036com" +
+                    ".lyyang.test.testgrpc.modelB\014GreeterProt" +
+                    "ob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
+            .internalBuildGeneratedFileFrom(descriptorData,
+                    new com.google.protobuf.Descriptors.FileDescriptor[] {
+                    });
+    internal_static_Stock_descriptor =
+            getDescriptor().getMessageTypes().get(0);
+    internal_static_Stock_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_Stock_descriptor,
+            new java.lang.String[] { "TickerSymbol", "CompanyName", "Description", });
+    internal_static_StockQuote_descriptor =
+            getDescriptor().getMessageTypes().get(1);
+    internal_static_StockQuote_fieldAccessorTable = new
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_StockQuote_descriptor,
+            new java.lang.String[] { "Price", "OfferNumber", "Description", });
     internal_static_HelloRequest_descriptor =
-      getDescriptor().getMessageTypes().get(0);
+            getDescriptor().getMessageTypes().get(2);
     internal_static_HelloRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_HelloRequest_descriptor,
-        new String[] { "Name", });
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_HelloRequest_descriptor,
+            new java.lang.String[] { "Name", });
     internal_static_AuthRequest_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+            getDescriptor().getMessageTypes().get(3);
     internal_static_AuthRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_AuthRequest_descriptor,
-        new String[] { "Username", "Password", });
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_AuthRequest_descriptor,
+            new java.lang.String[] { "Username", "Password", });
     internal_static_HelloReply_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+            getDescriptor().getMessageTypes().get(4);
     internal_static_HelloReply_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_HelloReply_descriptor,
-        new String[] { "Message", });
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_HelloReply_descriptor,
+            new java.lang.String[] { "Message", });
     internal_static_AuthReply_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+            getDescriptor().getMessageTypes().get(5);
     internal_static_AuthReply_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_AuthReply_descriptor,
-        new String[] { "Token", });
+            com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+            internal_static_AuthReply_descriptor,
+            new java.lang.String[] { "Token", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

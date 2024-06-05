@@ -24,6 +24,12 @@ public class GrpcHandler {
                 .body(Mono.just(greetingService.sayHello(serverRequest.queryParam("name").orElse("NULL"))), String.class);
     }
 
+    public Mono<ServerResponse> sayHelloNonblocking(ServerRequest serverRequest) {
+
+        return ok().contentType(MediaType.TEXT_PLAIN)
+                .body(greetingService.sayHelloNonblocking(serverRequest.queryParam("name").orElse("NULL")), String.class);
+    }
+
     public Mono<ServerResponse> nonBlocking(ServerRequest serverRequest) {
         return ok().contentType(MediaType.TEXT_EVENT_STREAM)
                 .body(greetingService.getStreamMessages(), String.class);

@@ -8,3 +8,5 @@ Blocking
 Example: java -jar your-app.jar -Dreactor.netty.ioWorkerCount=2
 
 https://stackoverflow.com/questions/48607114/how-to-set-event-loop-pool-size-in-spring-webflux-webclient
+
+https://stackoverflow.com/questions/72738549/using-grpc-as-client-in-webflux
